@@ -8,10 +8,14 @@ _This web app will take user inputs from a form and use PHP to save, add, displa
 
 ###Set-Up/Installation
 
-* _Clone from my GitHub page at https://github.com/jaredbeckler/address-book-php_
+* _Clone from my GitHub page at_ https://github.com/jaredbeckler/address-book-php
 * _Run the command `composer install` through your terminal in the project's home folder._
 * _Next, enter `cd web` and run `php -S localhost:8000` to open a local server._
 * _In your web browser, enter *localhost:8000* to view the web app._
+
+**OR**
+
+* _Enter_ jaredbeckler.github.io/address-book-php _to check it out on GitHub pages._
 
 ###Known Bugs
 
