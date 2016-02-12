@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Your Address Book</title>
+</head>
+<body>
+    <div class="container">
+<!-- CREATE NEW CONTACT FORM -->
+        <h1>Create a new contact here:</h1>
+            <form class="form-group" action="/added_contact" method="post">
+                <div class="form-group">
+                    <label for="contact_name">Contact's Name:</label>
+                    <input id="contact_name" name="contact_name" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="contact_phone_number">Contact's Phone Number:</label>
+                    <input id="contact_phone_number" name="contact_phone_number" type="tel">
+                </div>
+                <div class="form-group">
+                    <label for="contact_address">Contact's Address:</label>
+                    <input id="contact_address" name="contact_address" type="text">
+                </div>
+
+                <button type="submit">Create New Contact!</button>
+            </form>
+<!-- CONTACT DISPLAY AREA -->
+            {% if contacts is not empty %}
+                <h1>List of Contacts:</h1>
+                <ul>
+                    {% for contact in contacts %}
+                        <li>{{ contact.getName }}</li>
+                            <ul>
+                                <li>{{ contact.getPhoneNumber }}</li>
+                                <li>{{ contact.getAddress }}</li>
+                            </ul>
+                    {% endfor %}
+                </ul>
+<!-- ERASE ALL CONTACTS BUTTON -->
+                <form class="form-group" action="/delete" method="post">
+                    <button type="submit">Erase All Your Contacts!</button>
+                </form>
+            {% endif %}
+    </div>
+</body>
+</html>
