@@ -1,0 +1,19 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>You Added a Contact!</title>
+</head>
+<body>
+    <div class="container">
+        <h1>You added a new contact!</h1>
+    <!-- DISPLAY FOR CREATED CONTACT -->
+        <p>{{ newcontact.getName }}</p>
+        <ul>
+            <li>{{ newcontact.getPhoneNumber }}</li>
+            <li>{{ newcontact.getAddress }}</li>
+        </ul>
+    <!-- LINK TO VIEW ALL CONTACTS -->
+        <p>Click <a href="/">here</a> to view all of your contacts or add another!</p>
+    </div>
+</body>
+</html>
