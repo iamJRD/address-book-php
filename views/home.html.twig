@@ -12,19 +12,19 @@
             <h1>Create a new contact here:</h1>
                 <form class="form-group" action="/create_contact" method="post">
                     <div class="form-group">
-                        <label for="contact_name">Contact's Name:</label>
+                        <label for="contact_name">Name:</label>
                         <input id="contact_name" name="contact_name" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="contact_phone_number">Contact's Phone Number:</label>
+                        <label for="contact_phone_number">Phone Number:</label>
                         <input id="contact_phone_number" name="contact_phone_number" type="tel">
                     </div>
                     <div class="form-group">
-                        <label for="contact_address">Contact's Address:</label>
+                        <label for="contact_address">Address:</label>
                         <input id="contact_address" name="contact_address" type="text">
                     </div>
 
-                    <button class="btn btn-primary" type="submit">Create New Contact!</button>
+                    <button class="btn btn-success" type="submit" style="margin-top:25px;">Create New Contact!</button>
                 </form>
             </div>
 <!-- CONTACT DISPLAY AREA -->
@@ -34,14 +34,14 @@
                     {% for contact in contacts %}
                         <li>{{ contact.getName }}</li>
                             <ul>
-                                <li>{{ contact.getPhoneNumber }}<a href="tel:{{ contact.getPhoneNumber }}"><span class="glyphicon glyphicon-phone-alt"></span></a></li>
+                                <li>{{ contact.getPhoneNumber }}<a href="tel:{{ contact.getPhoneNumber }}"><span class="glyphicon glyphicon-phone-alt" style="margin-left:10px;"></span></a></li>
                                 <li>{{ contact.getAddress }}</li>
                             </ul>
                     {% endfor %}
                 </ul>
 <!-- ERASE ALL CONTACTS BUTTON -->
                 <form class="form-group" action="/delete_contacts" method="post">
-                    <button class="btn btn-danger" type="submit">Erase All Your Contacts!</button>
+                    <button class="btn btn-danger" type="submit" style="margin-top:25px;">Erase All Your Contacts!</button>
                 </form>
             {% endif %}
     </div>
