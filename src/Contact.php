@@ -41,5 +41,20 @@
         {
             return $this->address;
         }
+// SAVE, GET, DELETE FUNCTIONS
+        function save()
+        {
+            array_push($_SESSION['list_of_contacts'], $this);
+        }
+
+        function getAll()
+        {
+            return $_SESSION['list_of_contacts'];
+        }
+
+        function deleteAll()
+        {
+            return $_SESSION['list_of_contacts'] = array();
+        }
     }
 ?>
