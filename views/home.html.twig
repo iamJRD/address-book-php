@@ -1,6 +1,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- WILL NOT CORRECTLY LINK TO CSS FILE. UNKOWN PROBLEM -->
+    <!-- <link rel="stylesheet" href="../css/styles.css" type="text/css" /> -->
     <title>Your Address Book</title>
 </head>
 <body>
@@ -32,7 +34,7 @@
                     {% for contact in contacts %}
                         <li>{{ contact.getName }}</li>
                             <ul>
-                                <li>{{ contact.getPhoneNumber }}</li>
+                                <li>{{ contact.getPhoneNumber }}<a href="tel:{{ contact.getPhoneNumber }}"><span class="glyphicon glyphicon-phone-alt"></span></a></li>
                                 <li>{{ contact.getAddress }}</li>
                             </ul>
                     {% endfor %}
